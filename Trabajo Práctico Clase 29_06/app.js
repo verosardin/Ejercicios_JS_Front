@@ -117,6 +117,7 @@ let nombrePelicula = prompt("Por favor ingrese el nombre de su película favorit
 let director = prompt("Por favor ingrese el nombre del director de esa película");
 let duracion = prompt("Cuánto dura la película?");
 let actorPeli = prompt("Qué actor aparece en esta película?");
+let linkPeli = prompt("Por favor, agregar la URL de esta película de la web IMDB");
 
 let pelicula = {
 nombre: nombrePelicula,
@@ -128,13 +129,12 @@ actor: actorPeli,
 let divPeli = document.getElementById("pelicula")
 
 divPeli.style.display = 'block';
-divPeli.innerHTML = `<ol> <li>${nombrePelicula}</li></li>${director}</li><li>${duracion}</li><li>${actorPeli}</li></ol>`
+divPeli.innerHTML = `<ol> <li><a href="${linkPeli}">${nombrePelicula}</a></li></li>${director}</li><li>${duracion}</li><li>${actorPeli}</li></ol>`
 
 let listadosOrdenados = document.querySelectorAll('ol');
 for (const element2 of listadosOrdenados){
 element2.style.textAlign = 'center'
 }
-
 
 
 
