@@ -28,7 +28,7 @@ email.addEventListener("blur", function(){
 
     if (email.value == ""){
         errores.push("El campo de email debe estar completo");
-        document.querySelector('.email.invalid-feedback').innerHTML = '<li>Debe ingresar su email</li>';
+        document.querySelector('.email.invalid-feedback').innerHTML = '<li>Debe ingresar un mail válido</li>';
         email.classList.add("is-invalid");
         } else {
         document.querySelector('.email.invalid-feedback').innerHTML = ""
@@ -39,8 +39,8 @@ email.addEventListener("blur", function(){
 
 telefono.addEventListener("blur", function(){
 
-    if (telefono.value == ""){
-        document.querySelector('.phone.invalid-feedback').innerHTML = '<li> Debe ingresar un teléfono </li>';
+    if (telefono.value == "" || isNaN(telefono.value)){
+        document.querySelector('.phone.invalid-feedback').innerHTML = '<li> Debe ingresar un teléfono válido </li>';
         telefono.classList.add("is-invalid");
         errores.push("Debe ingresar un teléfono");
         } else{
