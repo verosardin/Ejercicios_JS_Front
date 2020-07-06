@@ -26,7 +26,7 @@ nombre.addEventListener("blur", function(){
 
 email.addEventListener("blur", function(){
 
-    if (email.value == ""){
+    if (email.value == "" || !email.value.includes("@")){
         errores.push("El campo de email debe estar completo");
         document.querySelector('.email.invalid-feedback').innerHTML = '<li>Debe ingresar un mail válido</li>';
         email.classList.add("is-invalid");
